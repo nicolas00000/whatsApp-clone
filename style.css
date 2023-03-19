@@ -1,0 +1,291 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #202c33;
+}
+
+.App{
+  height: 100vh;
+}
+
+.box{
+  background:url('./img/background.png');
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+
+.footer{
+  display: flex;
+  width: 100%;
+  height: 87%;
+  max-width: 1440px;
+  max-height: 1790px;
+}
+
+.heigth{
+  height: 100%;
+}
+
+/* -------------------HEADER--------------------- */
+header{
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.header-part-1{
+  width: 40%;
+  background-color: red;
+  display: flex;
+  border-right: 1px solid gray;
+}
+.header-part-2{
+  background-color: blue;
+  width: 70%;
+}
+
+.header-part-1, .header-part-2{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #202c33;
+  border-bottom: 1px solid gray;
+}
+
+.imagemPerfil{
+  width: 40px;
+  height: 40px;
+  background-color: blueviolet;
+  border-radius: 100%;
+  background-image: url('./img/user.png') ;
+  background-size:  50px ;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.imageteans{
+    background-image: url(./img/imagem-grupo.jpg);
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+}
+
+.name-people{
+    display: 	flex;
+    font-size: 20px;
+    color: rgb(243, 240, 240);
+    align-items: center;
+    justify-content: space-around;
+    width: 340px;
+}
+
+.icons{
+  justify-content: right;
+  display: flex;
+  font-size: 25px;
+  cursor: pointer;
+  width: 150px;
+  justify-content: space-between; 
+  color: #aebac1;
+}
+
+.icons-top{
+    width: 90px;
+    justify-content: space-around;
+}
+
+
+/* -----------------CONTACTS--------------- */
+.sectionMensage{
+  display: flex;
+  background-color: blueviolet;
+  height: 90%;
+}
+
+.contatcs{
+  height: 100%;
+  overflow: auto;
+  background-color: #111b21;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.contatcs .name-people{
+    width: 100%;
+    justify-content: start;
+    padding: 0 10px;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+
+.name-people .imagemPerfil {
+  margin-right: 10px;
+}
+
+
+
+.search-people{
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.search-people .pesquisa{
+  background: #202c33;
+  border-radius: 14px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  width: 80%;
+}
+
+.input-filter-user{
+  height: 100%;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color: rgb(253, 249, 249);
+  text-decoration-style: red;
+  margin: 0px 20px;
+}
+
+textarea:focus, input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+
+/* ------------section 2 mensage global----------- */
+
+
+.mensager-global{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* background-image: url("./img/../src/assets/background.png"); */
+}
+
+.ul{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.in{
+  justify-content: end;
+}
+
+.mensage{
+    width: 100%;
+    min-width: 100px;
+    max-width: 50% ;
+    margin: 10px;
+    border-radius: 10px;
+    height: 70px;
+    padding: 8px;
+    background-color: #202c33;
+    display: flex;
+    color: #dcede3;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    flex-direction: column;
+    height:auto;
+    word-wrap: break-word;
+}
+.my-mensage{
+    background-color: #005c4b !important;
+    align-self: flex-end;
+}
+
+
+.mensagens-global{
+    display: flex;
+    padding: 5px;
+}
+
+.image-people{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: red;
+    background-image: url("./img/inativeuser.png");
+    background-position: center center;
+    background-size: 40px;
+    background-repeat: no-repeat;
+}
+
+.name-people:hover{
+    background-color: #2a3942;
+    cursor: pointer;
+}
+
+.imgUser{
+    background-image: url(./img/imguser.jpg);
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+/* ----------------------foooter--------------- */
+
+.text-mensage{
+  background-color:#202c33 ;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.input-text-mensage{
+  background-color: #2a3942;
+  border: 0 ;
+  border-radius: 10px;
+  color: #8696a0;
+  padding: 10px;
+  width: 70%;
+}
+
+.icon-mensage{
+  width: 60px;
+  justify-content: space-around;
+  display: flex;
+  font-size: 22px;
+}
+
+i{
+  font-size: 22px;
+  color: #97a09a;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box1{
+    width: 40%;
+    background-color: red;
+}
+
+.box2{
+    width: 100%;
+    background-color: yellow;
+}
