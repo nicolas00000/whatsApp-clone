@@ -16,7 +16,17 @@
     </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
+  <div class="boxModal noneDisplay">
+    <div class="login-box">
+        <form>
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username" placeholder="Insira seu nome de usuário">
+            <a value="Entrar" onclick="entrarNaSala()" href="index.html"> Entrar </a> 
+        </form>
+    </div>    
+  </div>  
+
+<div id="root">
         <div class="App">
             <section class="container vh">
                 
@@ -110,7 +120,7 @@
                                 <span><i class="fa-solid fa-face-smile"></i></span>
                                 <span><i class="fa-solid fa-paperclip"></i></span>
                             </div> 
-                            <input type="text" name="" id="digitado" class='digitado input-text-mensage' class="input-text-mensage"/>
+                            <input type="text" name="" id="digitado" class='digitado input-text-mensage' class="input-text-mensage" placeholder="Mensagem"/>
                             <span  class="icon-push">
                                 <i class="fa-solid fa-paper-plane buttonMsg" onclick="enviarMensagem()"></i> 
                             </span>

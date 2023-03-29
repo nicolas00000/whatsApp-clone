@@ -1,5 +1,5 @@
 
-const myname = "joao"
+const myname = prompt("qual seu nome")
 const destinatario= "Todos";
 const tipoMensagem = "message";
 let contador = 0
@@ -78,6 +78,9 @@ function rolarchataofinal(){
 // ENVIAR MENSAGEM 
 function enviarMensagem(){
     let texto = document.getElementById("digitado");
+    if(texto.value === ""){
+        return
+    }
     const novaMsg = 
     {
         from: myname,
@@ -88,7 +91,7 @@ function enviarMensagem(){
     const promessa = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/messages", novaMsg);
     texto.value = ""
     promessa.catch(ruin);
-    promessa.then(ok);
+    renderizar()
 
 }
 
@@ -102,7 +105,11 @@ function ruin(){
 
 
 
-
+document.addEventListener("keypress", (e) => {
+    if (e. key === "Enter") {
+        enviarMensagem()
+    }
+    });
 
 
 

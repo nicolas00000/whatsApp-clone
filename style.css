@@ -280,12 +280,71 @@ i{
     height: 100vh;
 }
 
-.box1{
-    width: 40%;
-    background-color: red;
+
+
+
+
+
+
+
+
+
+
+
+
+.noneDisplay{
+  display: none !important;
+}
+.boxModal{
+  background-color: rgba(102, 95, 95, 0.767);
+  position: absolute;
+  height: 100vh ;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.login-box {
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px #888888;
+  padding: 40px;
+  width: 400px;
 }
 
-.box2{
-    width: 100%;
-    background-color: yellow;
+h1 {
+font-size: 36px;
+text-align: center;
+margin-bottom: 20px;
+}
+
+form {
+display: flex;
+flex-direction: column;
+}
+
+label {
+font-size: 20px;
+margin-bottom: 10px;
+}
+
+a {
+background-color: #4CAF50;
+color: #ffffff;
+font-size: 18px;
+padding: 10px;
+border: none;
+border-radius: 5px;
+  text-align: center;
+cursor: pointer;
+}
+
+a:hover {
+background-color: #3e8e41;
+}
+
+
+textarea:focus, input:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
 }
