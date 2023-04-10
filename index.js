@@ -6,7 +6,7 @@ let contador = 0
 entrarNaSala()
 run()
 setInterval(run, 6000)
-setInterval(manterConexao, 9000)
+setInterval(manterConexao, 8000)
 
 
 function run() {
@@ -123,7 +123,7 @@ function entrarNaSala(){
 
 //MANTER CONECTADO
 function manterConexao(){
-    participantes()
+    participante()
     const nomeObj = {name:myname}
     axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/status", nomeObj);
 }  
@@ -136,7 +136,7 @@ function participante(){
     const participantes = document.querySelector(".contatcs")
     function renderizarParticipantes(dados){
         dados.data.forEach(element => { 
-            participantes.innerHTML += `
+            participantes.innerHTML = `
             
             <div class="name-people">
                 <div class="imagemPerfil">
