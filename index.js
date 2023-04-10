@@ -90,7 +90,7 @@ function enviarMensagem(){
     }
     const promessa = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/messages", novaMsg);
     texto.value = ""
-    promessa.catch(ruin);
+    promessa.catch(reloading);
     renderizar()
 
 }
@@ -99,8 +99,8 @@ function ok(){
     renderizar()
 }
 
-function ruin(){
-  window.location.reload()
+function reloading(){
+    window.location.reload()
 }
 
 
@@ -123,6 +123,7 @@ function entrarNaSala(){
 
 //MANTER CONECTADO
 function manterConexao(){
+    participantes()
     const nomeObj = {name:myname}
     axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/status", nomeObj);
 }  
@@ -130,4 +131,21 @@ function manterConexao(){
 function participante(){
     const promessa = axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/participants")
     promessa.then(renderizarParticipantes)
+
+
+    const participantes = document.querySelector(".contatcs")
+    function renderizarParticipantes(dados){
+        dados.data.forEach(element => { 
+            participantes.innerHTML += `
+            
+            <div class="name-people">
+                <div class="imagemPerfil">
+                    
+                </div>
+                <span>${element.name}</span>
+            </div>
+
+            `
+        });
+    }
 }
