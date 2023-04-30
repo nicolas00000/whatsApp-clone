@@ -12,6 +12,117 @@ body{
   height: 100vh;
 }
 
+.login{
+  background-color: rgba(44, 42, 42, 0.29);
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pop-up{
+  height: 400px;
+  width: 100%;
+  max-width: 400px;
+  background-color: rgb(53, 66, 70);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 70px 0px;
+}
+
+.login-image{
+  background-color: #111b21;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  box-sizing: border-box;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.login-image i{
+  font-size: 32px;
+  z-index: 1;
+}
+
+.login-image img{
+  width: 100%;
+}
+
+.login-image:hover{
+  background-color: #202c33;
+}
+
+.none{
+  display: none;
+}
+
+.selectFileImg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+input[type="file"] {
+  display: none;
+}
+label {
+  padding: 20px 10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.pop-up button{
+  background-color: #2b982f;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  border: 0;
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+h3{
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nick-name{
+  padding: 10px;
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  border: 0;
+  border-radius: 5px;
+}
+
 .box{
   background:url('./img/background.png');
   width: 100%;
@@ -62,14 +173,22 @@ header{
 }
 
 .imagemPerfil{
-  width: 40px;
-  height: 40px;
-  background-color: blueviolet;
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  background-color: #57666f;
+  background-image: url('./img/inativeuser.png');
   border-radius: 100%;
-  background-image: url('./img/user.png') ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-size:  50px ;
-  background-repeat: no-repeat;
-  background-position: center;
+}
+
+.imagemPerfil img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
 }
 
 .imageteans{
@@ -121,7 +240,7 @@ header{
   justify-content: flex-start;
 }
 
-.contatcs .name-people{
+.Mycontatcs .name-people{
     width: 100%;
     justify-content: start;
     padding: 0 10px;
@@ -150,6 +269,7 @@ header{
   display: flex;
   align-items: center;
   width: 80%;
+  padding: 10px;
 }
 
 .input-filter-user{
@@ -230,8 +350,9 @@ textarea:focus, input:focus {
     cursor: pointer;
 }
 
+
+
 .imgUser{
-    background-image: url(./img/imguser.jpg);
     width: 50px;
     height: 50px;
     margin-left: 20px;

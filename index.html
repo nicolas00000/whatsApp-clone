@@ -17,15 +17,34 @@
     </head>
 <body>
 <noscript>ative o Java Script do seu navegador</noscript>
+<section class="login">
+    <div class="pop-up">
+        <div class="login-image">
+            <label for="arquivo"></label>
+            <input type="file" name="arquivo" class="selectFileImg" id="arquivo">
+            <i class="fa-solid fa-camera"></i>
+        </div>
+        
+        <br>
+        
+        <div>
+            <h3>Digite seu nome</h3>
+            <br>
+            <input type="text" class="nick-name" id="nick-name" autocomplete="off">
+        </div>
 
+        <br>
+        <button onclick="entrarNaSala()" id="InputLogin">ENTRAR</button>
+    </div>
+</section>
 <div id="root">
         <div class="App">
             <section class="container vh">
                 
                 <header>
                     <div class="header-part-1">
-                        <div class="imagemPerfil imgUser">
-                            
+                        <div class="imagemPerfil">
+                            <img src="img/imguser.jpg" id="imgUser" alt="">
                         </div>
         
                         <div class="icons">
@@ -64,10 +83,12 @@
                         <div class="search-people">
                             <div class="pesquisa">
                             <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
-                                <input type="text" name="" id="" placeholder="Pesquisar ou começar uma nova conversa" class="input-filter-user"/>
+                                <input type="text" name="" autocomplete="off" id="" placeholder="Pesquisar ou começar uma nova conversa" class="input-filter-user"/>
                             </div>
                             <i class="fa-solid fa-arrow-up-wide-short"></i>
+
                         </div>
+                        <div class="Mycontatcs"></div>
                 
                                                             <br />
                 
@@ -84,7 +105,7 @@
                                 <span><i class="fa-solid fa-face-smile"></i></span>
                                 <span><i class="fa-solid fa-paperclip"></i></span>
                             </div> 
-                            <input type="text" name="" id="digitado" class='digitado input-text-mensage' class="input-text-mensage" placeholder="Mensagem"/>
+                            <input autocomplete="off" type="text" name="" id="digitado" class='digitado input-text-mensage' class="input-text-mensage" placeholder="Mensagem"/>
                             <span  class="icon-push">
                                 <i class="fa-solid fa-paper-plane buttonMsg" onclick="enviarMensagem()"></i> 
                             </span>
