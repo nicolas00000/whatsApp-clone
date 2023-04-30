@@ -1,21 +1,60 @@
 
-const myname = prompt("qual seu nome")
 const destinatario= "Todos";
+let myname
 const tipoMensagem = "message";
 let contador = 0
-entrarNaSala()
-run()
-setInterval(run, 6000)
-setInterval(manterConexao, 8000)
 
+// ENVIAR CONEXAO
+function entrarNaSala(){
+    myname = document.querySelector("#nick-name").value
+    const nomeObj = {name:myname}
+    const promessa = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/participants", nomeObj);
+    promessa.then(aprovado, rejeitado);
+}
+
+function aprovado(){
+    document.querySelector(".pop-up").classList.add("none")
+    document.querySelector(".login").classList.add("none")
+    run()
+    setInterval(run, 6000)
+    setInterval(manterConexao, 8000)
+}
 
 function run() {
     axios.get('https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/messages').then(renderizar)
 }
 
+//MANTER CONECTADO
+function manterConexao(){
+    participante()
+    const nomeObj = {name:myname}
+    axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/status", nomeObj);
+}  
+
+function participante(){
+    const promessa = axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/participants")
+    promessa.then(renderizarParticipantes)
+    const participantes = document.querySelector(".Mycontatcs")
+    participantes.innerHTML = ""
+    function renderizarParticipantes(dados){
+        dados.data.forEach(element => { 
+            participantes.innerHTML += `
+            
+            <div class="name-people">
+                <div class="imagemPerfil">
+                    
+                </div>
+                <span>${element.name}</span>
+            </div>
+            `
+        });
+    }
+    }
+
+
+
 function renderizar(dados){
-    let renderMensage = document.querySelector(".lista")
-    console.log(contador)    
+    let renderMensage = document.querySelector(".lista")    
     dados.data.forEach(element => {
         renderMensage.innerHTML += RenderMensage(element.from, element.text, element.type)
     });
@@ -68,13 +107,6 @@ function renderizar(dados){
     
 }
 
-function rolarchataofinal(){
-    const ultimamsg = document.querySelector(".lista li:last-child")
-    ultimamsg.scrollIntoView()
-}
-
-
-
 // ENVIAR MENSAGEM 
 function enviarMensagem(){
     let texto = document.getElementById("digitado");
@@ -90,62 +122,41 @@ function enviarMensagem(){
     }
     const promessa = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/messages", novaMsg);
     texto.value = ""
+    
     promessa.catch(reloading);
     renderizar()
 
 }
 
-function ok(){
-    renderizar()
-}
+
 
 function reloading(){
+    alert("nao foi possivel enviar sua mensagem devido à um erro de nosso servidor")
     window.location.reload()
 }
 
-
-
+//enviar com enter
 document.addEventListener("keypress", (e) => {
-    if (e. key === "Enter") {
+    
+    if (e.key == 'Enter') {
         enviarMensagem()
     }
-    });
+    
+});
 
-
-
-//////////////////////////////
-// ENVIAR CONEXAO
-function entrarNaSala(){
-    const nomeObj = {name:myname}
-    const promessa = axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/participants", nomeObj);
-    promessa.then(ok);
+function rolarchataofinal(){
+    const ultimamsg = document.querySelector(".lista li:last-child")
+    ultimamsg.scrollIntoView()
 }
 
-//MANTER CONECTADO
-function manterConexao(){
-    participante()
-    const nomeObj = {name:myname}
-    axios.post("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/status", nomeObj);
-}  
-
-function participante(){
-    const promessa = axios.get("https://mock-api.bootcamp.respondeai.com.br/api/v2/uol/participants")
-    promessa.then(renderizarParticipantes)
-
-
-    const participantes = document.querySelector(".contatcs")
-    function renderizarParticipantes(dados){
-        dados.data.forEach(element => { 
-            participantes.innerHTML = `
-            
-            <div class="name-people">
-                <div class="imagemPerfil">
-                    
-                </div>
-                <span>${element.name}</span>
-            </div>
-
-            `
-        });
-    }
+function rejeitado(){
+    alert("este nome ja está em uso")
 }
+
+//trocar imagem de pergil pelo modal
+let img = document.getElementById("imgUser");
+let input = document.getElementById("arquivo");
+
+input.onchange = (e) => {
+    if (input.files[0]) img.src = URL.createObjectURL(input.files[0]);
+};
