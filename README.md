@@ -1,8 +1,15 @@
 # whatsApp-clone
-## Utilizando uma API publica de uma aula do curso da ***DRIVEN***, resolvi clonar a interface do ***whatsapp web*** usando html css js <br/><br/> Assim que o usuario entrar na pagina sera perguntado seu nome e o possibilitando adicionar uma imagem de perfil, visivel somente a ele mesmo
-<h3> em inpiração ao meu grupo de estudo "Pythonzinho" embora não seja só de python, resolvi os homenageamos <h3/>
+<h3> Utilizando uma API pública apresentada durante uma aula do curso da DRIVEN, decidi criar uma réplica da interface do WhatsApp Web utilizando HTML, CSS e JavaScript. Ao entrar na página, o usuário é solicitado a inserir seu nome e pode adicionar uma imagem de perfil que só será visível para ele mesmo.
 
-### lembrando que é um chat em tempo real, com milisegundos de delay, e para n pesar a pagina, é normal ficar piscando
+Essa iniciativa foi inspirada pelo meu grupo de estudo chamado "Pythonzinho", que, embora não seja exclusivamente voltado para Python, decidi homenagear por meio deste projeto.
+<h3/>
+<h2> Funcionalidades <h2/>
+<ul>
+  <div>- O usuário é perguntado seu nome ao entrar na página. <div/>
+  <div>- O usuário pode adicionar uma imagem de perfil, visível somente a ele mesmo. <div/>
+  <div>- O chat é em tempo real, com milissegundos de delay, para não pesar a página, é normal que ela fique piscando. <div/>
+<ul/>
+
 <br/>
 
 <div align="center">
@@ -13,11 +20,11 @@
   </div
 
 
-<div align="center" width="100%"  > 
-  <p> HTML <p/>
-  <p> CSS <p/>
-  <p> JS <p/>
+<ul> 
+  <li> HTML <li/>
+  <li> CSS <li/>
+  <li> JS <li/>
   
 =============== <a href="https://nicolas00000.github.io/whatsApp-clone/"> LIVE PREVIW </a> ================
 
-<div/>
+<ul/>
